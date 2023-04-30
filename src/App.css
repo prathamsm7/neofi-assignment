@@ -1,0 +1,264 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #040406;
+  color: aliceblue;
+  font-family: 'Poppins';
+  font-style: normal;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+
+  width: 100%;
+  height: 69px;
+  background: #0b0819;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  gap: 10px;
+}
+
+.logo span {
+  font-weight: 700;
+  font-size: 24px;
+  text-transform: uppercase;
+  background: linear-gradient(94.37deg, #3387d5 -5.94%, #7a06c9 115.34%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.tabs {
+  height: 100%;
+  display: none;
+  align-items: center;
+  margin: auto;
+}
+
+.sidenav .tabs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidenav .tabs button {
+  margin: 10px 0;
+}
+
+.sidenav .tabs button:hover {
+  background-color: #1c1731;
+}
+
+.tabs button {
+  height: 100%;
+  width: 90px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: capitalize;
+  color: #5a5a5a;
+  padding: 0px 15px;
+  background: none;
+  border: 2px solid transparent;
+}
+
+.tabs .activeButton {
+  color: #627eea;
+  border-bottom: 2px solid #627eea !important;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.connectButton {
+  background: linear-gradient(94.37deg, #3387d5 -5.94%, #7a06c9 115.34%),
+    linear-gradient(151.31deg, #ffffff -57.71%, rgba(255, 255, 255, 0) 82.32%);
+  border-radius: 30px;
+  padding: 10px 17px;
+  color: #ffffff;
+  font-weight: 700;
+  border: none;
+  margin-right: 80px;
+  display: none;
+}
+
+main {
+  width: 90%;
+  height: 567px;
+  margin: auto;
+}
+
+.container {
+  background: #1c1731;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 150px;
+  padding: 40px 20px;
+
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0em;
+  border-radius: 10px;
+  border: 1px solid #d9d9d9;
+  color: #c5c5c5;
+
+  position: relative;
+}
+
+.half-circle {
+  width: 115px;
+  height: 55px;
+  position: absolute;
+  left: 50%;
+  top: -1px;
+  transform: translateX(-50%);
+  border-bottom: 1px solid #c5c5c5;
+  border-left: 1px solid #c5c5c5;
+  border-right: 1px solid #c5c5c5;
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  background: #040406;
+}
+
+.half-circle div {
+  width: 85px;
+  height: 85px;
+
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  background-color: #1c1731;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.half-circle img {
+  width: 100%;
+}
+
+.container input {
+  width: 95%;
+  height: 20px;
+  padding: 5px 10px;
+  margin: 10px 0;
+  background-color: #1c1731;
+  color: #ffffff;
+
+  border: 1px solid rgba(110, 86, 248, 0.25);
+  border-radius: 5px;
+}
+
+.container .current {
+  display: flex;
+  justify-content: space-between;
+}
+
+.currentValue {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0em;
+  color: #627eea;
+}
+
+.container .connectButton {
+  margin-right: 0;
+  display: block;
+}
+
+.css-13cymwt-control,
+.css-t3ipsp-control,
+.css-1nmdiq5-menu {
+  background-color: #1c1731 !important;
+}
+
+.css-1dimb5e-singleValue {
+  color: #627eea !important;
+}
+
+.hamburger {
+  margin-right: 20px;
+}
+
+.sidenav {
+  display: none;
+  position: absolute;
+  width: 100%;
+  background: #0b0819;
+  z-index: 10;
+  border-radius: 10px;
+}
+
+.sidenav .connectButton {
+  display: block;
+  background: linear-gradient(94.37deg, #3387d5 -5.94%, #7a06c9 115.34%),
+    linear-gradient(151.31deg, #ffffff -57.71%, rgba(255, 255, 255, 0) 82.32%);
+  border-radius: 30px;
+  padding: 10px 17px;
+  color: #ffffff;
+  font-weight: 700;
+  border: none;
+  margin-right: 80px;
+  width: 200%;
+}
+
+.active {
+  display: flex !important;
+  top: 70px;
+  width: 90%;
+  margin-left: 5%;
+  border: 1px solid;
+}
+
+@media screen and (min-width: 600px) {
+  main {
+    width: 470px;
+  }
+
+  .container {
+    padding: 40px;
+  }
+
+  .currentValue {
+    font-size: 24px;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    margin-left: 40px;
+    gap: 10px;
+  }
+
+  .logo span {
+    font-size: 29px;
+  }
+
+  .tabs {
+    display: flex;
+  }
+
+  .connectButton {
+    display: flex;
+  }
+
+  .hamburger {
+    display: none;
+  }
+}
